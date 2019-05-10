@@ -1,0 +1,25 @@
+.transaction-form {
+    margin: 30px 0;
+    form {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.userlist-container {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        > .btn {
+            margin-bottom: 20px;
+            border-radius: 0;
+            &:not(.active) {
+                background: none;
+                color: #545b62;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.amount-container, .btn-container {
+    align-self: center;
+}

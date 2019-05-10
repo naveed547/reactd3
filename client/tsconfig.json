@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es5",
+        "removeComments": true,
+        "allowSyntheticDefaultImports": false,
+        "jsx": "react",
+        "outDir": "./client/distr/",
+        "lib": ["es2015", "es2017", "dom"],
+        "typeRoots": [
+            "node_modules/@types",
+            "client/node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "Components/*": ["client/src/components/*"],
+			"Containers/*": ["client/src/containers/*"],
+			"Mock/*": ["client/src/mock/*"],
+            "Model/*": ["client/src/model/*"],
+            "Reducers/*": ["client/src/reducers/*"],
+            "Styles/*": ["client/src/styles/*"],
+            "Actions/*": ["client/src/actions/*"],
+            "Store/*": ["client/src/store/*"],
+        }
+    },
+    "include": [
+        "./client/src/**/**/*"
+    ],
+    "exclude": [
+        "node_modules", "client/distr", "client/jest", "client/node_modules"
+    ]
+}
