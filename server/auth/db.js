@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const config = require(`../config/config.development.js`); // eslint-disable-line import/no-dynamic-require
+const config = require(`../config/config.production.js`); // eslint-disable-line import/no-dynamic-require
 
 module.exports = () => {
 	mongoose.connect(config.mongodburi, (err) => {
