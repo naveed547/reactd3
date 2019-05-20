@@ -46,7 +46,7 @@ class TransactionChart extends React.PureComponent<TransactionChartProps, any> {
 				id: payment,
 				values: [{amount: 0, noOfTransaction: 0}, ...this.props.transactionList
 					.filter((tran) => tran.paymentMode === payment)
-					.map((tran, index) => ({amount: tran.amount, noOfTransaction: (index + 1)}))],
+					.map((tran, index) => ({amount: parseInt(tran.amount, 10), noOfTransaction: (index + 1)}))],
 			};
 		});
 		const data = [{noOfTransaction: 0}];
@@ -66,7 +66,6 @@ class TransactionChart extends React.PureComponent<TransactionChartProps, any> {
 			});
 		});
 		this.x.domain(extent(data, (d) => d.noOfTransaction));
-
 		this.y.domain([
 			min(payments, (c) => min(c.values, (d) => d.amount)),
 			max(payments, (c) => max(c.values, (d) => d.amount)),
